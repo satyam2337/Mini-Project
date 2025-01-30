@@ -1,0 +1,99 @@
+.bottomText {
+    font-size: 1.2rem;
+    padding-top: 10%;
+    max-width: 1000px;
+}
+
+.header p {
+    margin-bottom: 1%;
+    color: wheat;
+    text-align: center;
+}
+
+.features,
+.how-to,
+.why-use,
+.tips,
+.faq {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.features p {
+    margin: 5%;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+ul,
+ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+ul li,
+ol li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.faq-item p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #ffffff;
+    display: flex;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .features,
+    .how-to,
+    .why-use,
+    .tips,
+    .faq {
+        padding: 1.5rem 1rem;
+    }
+
+    .text-block {
+        padding: 1.5rem;
+    }
+
+    .text-block h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-block p {
+        font-size: 0.95rem;
+    }
+
+    .text-block a {
+        font-size: 0.9rem;
+    }
+}

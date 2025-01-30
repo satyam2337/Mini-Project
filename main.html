@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Image Generator</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/bottomstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="main.html" style="text-decoration: none; color: inherit;">AI</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="main.html" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Category <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/Page/page1.html">Image Background Remover</a></li>
+                    <li><a href="#">Image Upscaler</a></li>
+                    <li><a href="#">Image Enhancer</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!--Container-->
+    <div class="container">
+        <h1>Text to Image Generator</h1>
+        <textarea id="prompt" placeholder="Enter your text prompt here..."></textarea>
+        <!--button container-->
+        <div class="button-container">
+            <button onclick="generateImage()">Generate Image</button>
+            <button onclick="clearResults()">Clear Results</button>
+            <button onclick="generateRandomText()">Random Text</button>
+        </div>
+        <div id="results"></div>
+    </div>
+    <div class="bottomText">
+        <section class="header">
+            <p>Bring Your Imagination to Life With our Free Online AI Image Generator,</p>
+            <p>simply type your ideas and watch them transform into captivating images in seconds.</p>
+        </section>
+
+        <section class="features">
+            <h2>Turn Words into Art with AI</h2>
+            <p>Our AI Image Generator uses advanced machine learning algorithms to convert text descriptions into
+                high-quality images. From abstract concepts to detailed scenes, the possibilities are endless.</p>
+
+            <div class="feature-list">
+                <h3>Features of Our AI Image Generator</h3>
+                <ul>
+                    <li>Multiple Styles and Modes: Choose from artistic styles like photorealistic, watercolor,
+                        abstract,
+                        fantasy, and more.</li>
+                    <li>Customization Options: Adjust colors, lighting, and composition to fine-tune your images.</li>
+                    <li>High-Resolution Output: Generate images suitable for web, print, or social media.</li>
+                    <li>User-Friendly Interface: No technical skills required—just enter your text prompt and select
+                        your
+                        preferences.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="how-to">
+            <h2>How to Use the AI Image Generator</h2>
+            <ol>
+                <li><strong>Enter Your Text Prompt:</strong> Type a description of the image you want to create.
+                    Example: "A
+                    serene sunset over a mountain lake with reflection."</li>
+                <li><strong>Select Style and Settings:</strong> Choose an art style and adjust settings like color
+                    palette
+                    and aspect ratio.</li>
+                <li><strong>Generate and Refine:</strong> Click "Generate Image" to see your creation. Tweak your prompt
+                    or
+                    settings if needed.</li>
+                <li><strong>Download and Share:</strong> Save your image or share it directly on social media.</li>
+            </ol>
+        </section>
+
+        <section class="why-use">
+            <h2>Why Use Our AI Image Generator?</h2>
+            <ul>
+                <li><strong>For Content Creators:</strong> Enhance blogs, articles, and social media posts with unique
+                    visuals.</li>
+                <li><strong>For Designers:</strong> Quickly prototype ideas or generate inspiration for projects.</li>
+                <li><strong>For Entrepreneurs:</strong> Create graphics for ads, presentations, and promotional
+                    materials
+                    effortlessly.</li>
+            </ul>
+        </section>
+
+        <section class="tips">
+            <h2>Tips for Creating Amazing AI-Generated Images</h2>
+            <ul>
+                <li><strong>Be Specific:</strong> Include details to help the AI understand your request better.</li>
+                <li><strong>Experiment with Styles:</strong> Try different art styles to find the perfect match.</li>
+                <li><strong>Use Descriptive Keywords:</strong> Keywords like "digital art," "oil painting," or
+                    "minimalist"
+                    can influence the style.</li>
+                <li><strong>Adjust Settings:</strong> Customize color filters, lighting, and aspect ratios for a unique
+                    touch.</li>
+            </ul>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Is commercial use allowed?</h3>
+                <p>Yes, commercial use is permitted for the generated images. Refer to our Terms of Service for details.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I use the generated images for NFTs?</h3>
+                <p>Yes, they can be used for NFTs.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is there an API available?</h3>
+                <p>Yes! Check our documentation for access to all available APIs.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Who owns the output?</h3>
+                <p>The generated images are considered public domain and have no owner.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is there a copyright on the output?</h3>
+                <p>The images generated by the AI are not subject to copyright.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I get higher resolution images?</h3>
+                <p>Currently, we do not offer higher resolutions, but quality improvements are planned.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 AI. All rights reserved.</p>
+    </footer>
+
+
+
+    <script src="/javascripts/script.js"></script>
+</body>
+
+</html>
