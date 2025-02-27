@@ -152,6 +152,12 @@ button:hover {
   justify-content: center;
 }
 
+#results2 {
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /*Footer Design*/
 .footer {
   background-color: #222;
