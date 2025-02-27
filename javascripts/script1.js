@@ -59,7 +59,7 @@ async function UploadImg() {
             method: "POST",
             headers: {
                 accept: "application/json",
-                Authorization: "Bearer eyJraWQiOiI5NzIxYmUzNi1iMjcwLTQ5ZDUtOTc1Ni05ZDU5N2M4NmIwNTEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhdXRoLXNlcnZpY2UtMGUyZWY4ZDUtN2UxZC00YjkxLTg5ODMtZjQwM2Q5YjEyMDYwIiwiYXVkIjoiMjE2MjE3NjIyMDAyMTAyIiwibmJmIjoxNzQwNjA2NDQwLCJzY29wZSI6WyJiMmItYXBpLmdlbl9haSIsImIyYi1hcGkuaW1hZ2VfYXBpIl0sImlzcyI6Imh0dHBzOi8vYXBpLnBpY3NhcnQuY29tL3Rva2VuLXNlcnZpY2UiLCJvd25lcklkIjoiMjE2MjE3NjIyMDAyMTAyIiwiaWF0IjoxNzQwNjA2NDM5LCJqdGkiOiIyYTg0NDhlNS0xOTVlLTQyOTMtOWMwOC01NzYzNWE4ZjY2ODUifQ.igX-Jh7R8qmwxfxOgDuZVBX6wTCib7jh-I3-stdhUKz5pcNlw0AT7DHJARln5ye_0xGUgqu9DBdkwREYzb-FVL9GKtDVQKfknHjAwhuUETS5zfur04LiYZQDFodrUDTaC2V_UJkmgpBnl1gpvN8ZQElS2H1cJOoQWXbHHimpKxcsM2xMs5YuwQV-qSd6WD2DukUk-pLek-zxo0CjP8_PJOVfp5Y_jIBgffSujqzHLfO-sHArEmXPMGU3Ci1WwePvq99ecl60y9u-GGkeoUS-vayHc-W8f5UY5wRRu0KaaFnmDo04X9WCGtqKCWl2WnFRZ-6-J9s6FD7ogH5DkSqxdg"
+                "X-Picsart-API-Key": "eyJraWQiOiI5NzIxYmUzNi1iMjcwLTQ5ZDUtOTc1Ni05ZDU5N2M4NmIwNTEiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhdXRoLXNlcnZpY2UtMGUyZWY4ZDUtN2UxZC00YjkxLTg5ODMtZjQwM2Q5YjEyMDYwIiwiYXVkIjoiMjE2MjE3NjIyMDAyMTAyIiwibmJmIjoxNzQwNjA2NDQwLCJzY29wZSI6WyJiMmItYXBpLmdlbl9haSIsImIyYi1hcGkuaW1hZ2VfYXBpIl0sImlzcyI6Imh0dHBzOi8vYXBpLnBpY3NhcnQuY29tL3Rva2VuLXNlcnZpY2UiLCJvd25lcklkIjoiMjE2MjE3NjIyMDAyMTAyIiwiaWF0IjoxNzQwNjA2NDM5LCJqdGkiOiIyYTg0NDhlNS0xOTVlLTQyOTMtOWMwOC01NzYzNWE4ZjY2ODUifQ.igX-Jh7R8qmwxfxOgDuZVBX6wTCib7jh-I3-stdhUKz5pcNlw0AT7DHJARln5ye_0xGUgqu9DBdkwREYzb-FVL9GKtDVQKfknHjAwhuUETS5zfur04LiYZQDFodrUDTaC2V_UJkmgpBnl1gpvN8ZQElS2H1cJOoQWXbHHimpKxcsM2xMs5YuwQV-qSd6WD2DukUk-pLek-zxo0CjP8_PJOVfp5Y_jIBgffSujqzHLfO-sHArEmXPMGU3Ci1WwePvq99ecl60y9u-GGkeoUS-vayHc-W8f5UY5wRRu0KaaFnmDo04X9WCGtqKCWl2WnFRZ-6-J9s6FD7ogH5DkSqxdg"
             },
             body: formData,
         });
@@ -70,7 +70,12 @@ async function UploadImg() {
 
         const result = await response.json();
         if (result.data && result.data.url) {
-            resultsDiv.innerHTML = `<img src="${result.data.url}" alt="Processed Image" style="max-width: 100%; border-radius: 8px;">`;
+            resultsDiv.innerHTML = `
+                <img src="${result.data.url}" alt="Processed Image" style="max-width: 100%; border-radius: 8px;">
+                <div style="margin-top: 1rem;">
+                    <a href="${result.data.url}" download="processed_image.png" style="padding: 0.5rem 1rem; border: none; background-color: #4CAF50; color: white; border-radius: 5px; cursor: pointer; text-decoration: none;">Download</a>
+                </div>
+            `;
         } else {
             throw new Error("Invalid response from API");
         }
