@@ -84,3 +84,4 @@ async function UploadImg() {
         resultsDiv.innerHTML = `<p style="color: red;">Failed to process the image. Please try again later.</p>`;
     }
 }
+//
